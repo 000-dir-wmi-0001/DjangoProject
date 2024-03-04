@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        table,th,td{border: 2px solid black;}
+    </style>
+</head>
+<body>
+    <h1>this is testing fo Django servers</h1>
+    <h1>this is testing fo Django servers</h1>
+    <h1>this is Html  page s</h1>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>vote eligible</th>
+    </tr>
+    {% for people in peoples %}
+    <tr>
+        <td>{{people.name}}</td>
+        <td>{{people.age}}</td>
+        <td>
+        {% if people.age >= 18 %}
+        👍
+        {% else %}
+        👎
+        {% endif%} 
+        </td>
+  
+  
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
